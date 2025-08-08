@@ -1,3 +1,3 @@
 # estudandoFastapi-primeiroCRUD
-# estudandoFastapi-primeiroCRUD
-# estudandoFastapi-primeiroCRUD
+
+Esse é meu primeiro projeto utilizando o FastAPI
