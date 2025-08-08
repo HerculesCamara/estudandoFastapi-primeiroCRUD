@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=hercules
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=fastapi_db
+
+  api:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      - DATABASE_URL=postgresql://hercules:123@db/fastapi_db
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
