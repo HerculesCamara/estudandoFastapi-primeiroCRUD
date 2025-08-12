@@ -5,6 +5,7 @@ from typing import Optional
 class ItemBase(BaseModel):
   name: str
   description: Optional[str] = None
+  imageURL: Optional[str] = None
 
 class ItemCreate(ItemBase):
   pass

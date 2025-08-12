@@ -15,7 +15,7 @@ services:
     ports:
       - "8000:80"
     environment:
-      - DATABASE_URL=postgresql://hercules:123@db/fastapi_db
+      - DATABASE_URL=postgresql+psycopg2://hercules:123@db:5432/fastapi_db
     depends_on:
       - db
 
